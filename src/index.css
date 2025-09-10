@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gray-50 text-gray-900;
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Cursor blink for AI text only */
+.cursor-ai {
+  display: inline-block;
+  width: 1.5px; /* thinner cursor */
+  height: 1em;
+  background-color: #FFD700; /* gold color for AI */
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+/* Glow and blurred border for PNG */
+.glow-blur {
+  filter: drop-shadow(0 0 25px rgba(255, 255, 255, 0.425));
+  mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  -webkit-mask-image: radial-gradient(circle, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+  border-radius: 1rem;
+}
+
+.animate-blink {
+  animation: blink 1s step-start infinite;
+}
+
